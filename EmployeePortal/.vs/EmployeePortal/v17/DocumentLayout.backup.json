@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\views\\employee\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:views\\employee\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\views\\employee\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:views\\employee\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\views\\employee\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:views\\employee\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\views\\employee\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:views\\employee\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\views\\employee\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:views\\employee\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\models\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:models\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\models\\employeelistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:models\\employeelistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|c:\\users\\hp\\source\\repos\\employee-management\\employeeportal\\models\\employeetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623778BB-1F96-49B3-818F-2CD68DA47E91}|EmployeePortal.csproj|solutionrelative:models\\employeetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T18:35:25.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Delete.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswEAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T18:35:00.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Update.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Update.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Update.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Update.cshtml",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAswKQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T18:34:33.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Details.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Details.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Details.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAswEYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T18:34:03.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Create.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Create.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAswKEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T18:33:33.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\List.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\List.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\List.cshtml",
+              "RelativeToolTip": "Views\\Employee\\List.cshtml",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAswKIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T18:33:05.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Success.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Success.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Views\\Employee\\Success.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Success.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswD8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T18:32:11.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwLoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T18:29:37.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Models\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\EmployeeService.cs",
+              "RelativeToolTip": "Models\\EmployeeService.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAA9wG0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T18:28:52.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\EmployeeListViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\EmployeeListViewModel.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\EmployeeListViewModel.cs",
+              "RelativeToolTip": "Models\\EmployeeListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T18:28:21.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T18:27:53.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmployeeType.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\EmployeeType.cs",
+              "RelativeDocumentMoniker": "Models\\EmployeeType.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\Employee-Management\\EmployeePortal\\Models\\EmployeeType.cs",
+              "RelativeToolTip": "Models\\EmployeeType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T18:27:27.362Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
