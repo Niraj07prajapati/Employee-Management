@@ -1,6 +1,11 @@
 ﻿using EmployeePortal.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace EmployeePortal.Controllers
 {
@@ -8,21 +13,39 @@ namespace EmployeePortal.Controllers
     {
         private readonly EmployeeService _employeeService;
 
-        public EmployeeController()
+        public EmployeeController(EmployeeService employeeService)
         {
-            _employeeService = new EmployeeService();
+            _employeeService = employeeService;
+        }
+
+
+
+        private bool IsAuthenticated()
+        {
+            var username = HttpContext.Session.GetString("username");
+            var role = HttpContext.Session.GetString("role");
+
+            return !string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(role);
+        }
+
+        private string GetUserRole()
+        {
+            return HttpContext.Session.GetString("role");
         }
 
         [HttpGet]
         public async Task<IActionResult> List(
-        [FromQuery] string SearchTerm, // Model binding from the query string
-        [FromQuery] string SelectedDepartment, // Model binding from the query string
-        [FromQuery] string SelectedType, // Model binding from the query string
-        [FromQuery] int PageNumber = 1, // Model binding from the query string with a default value
-        [FromQuery] int PageSize = 5) // Model binding from the query string with a default value
+      [FromQuery] string SearchTerm,
+      [FromQuery] string SelectedDepartment,
+      [FromQuery] string SelectedType,
+      [FromQuery] int PageNumber = 1,
+      [FromQuery] int PageSize = 5)
         {
-            // Retrieve the filtered and paginated list of employees
-            var (employees, totalCount) = await _employeeService.GetEmployees(SearchTerm, SelectedDepartment, SelectedType, PageNumber, PageSize);
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            var (employees, totalCount) = await _employeeService.GetEmployees(
+                SearchTerm, SelectedDepartment, SelectedType, PageNumber, PageSize);
 
             var viewModel = new EmployeeListViewModel
             {
@@ -35,133 +58,159 @@ namespace EmployeePortal.Controllers
                 SelectedType = SelectedType
             };
 
-            // Generate SelectLists for dropdowns
             GetSelectLists();
-
-            // Set page size options in ViewBag for use in the view
             ViewBag.PageSizeOptions = new SelectList(new List<int> { 3, 5, 10, 15, 20, 25 }, PageSize);
-
+            Console.WriteLine("Session username: " + HttpContext.Session.GetString("username"));
             return View(viewModel);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            // Prepare dropdown options before rendering the Create view
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            if (GetUserRole() != "Admin")
+            {
+                TempData["Error"] = "You do not have permission to create employees.";
+                return RedirectToAction("List");
+            }
+
             GetSelectLists();
             return View();
         }
 
-        // Model binding from the form data
         [HttpPost]
-        public IActionResult Create([FromForm] Employee employee)
+        public async Task<IActionResult> Create([FromForm] Employee employee)
         {
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            if (GetUserRole() != "Admin")
+            {
+                TempData["Error"] = "You do not have permission to create employees.";
+                return RedirectToAction("List");
+            }
+
             if (ModelState.IsValid)
             {
-                // Create a new employee and redirect to the Success page
-                _employeeService.CreateEmployee(employee);
+                await _employeeService.CreateEmployee(employee);
                 return RedirectToAction("Success", new { id = employee.Id });
             }
 
-            // If validation fails, regenerate dropdown options and return the view with validation errors
             GetSelectLists();
             return View(employee);
         }
 
-        // Model binding from the route data
-        public IActionResult Success([FromRoute] int id)
+        public async Task<IActionResult> Success([FromRoute] int id)
         {
-            // Retrieve the employee by ID and display the Success view
-            var employee = _employeeService.GetEmployeeById(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            var employee = await _employeeService.GetEmployeeById(id);
+            if (employee == null) return NotFound();
+
             return View(employee);
         }
 
-        // Model binding from the route data
-        public IActionResult Details([FromRoute] int id)
+        public async Task<IActionResult> Details([FromRoute] int id)
         {
-            // Retrieve the employee details by ID and display the Details view
-            var employee = _employeeService.GetEmployeeById(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            var employee = await _employeeService.GetEmployeeById(id);
+            if (employee == null) return NotFound();
+
             return View(employee);
         }
 
-        // Model binding from the route data
         [HttpGet]
-        public IActionResult Update([FromRoute] int id)
+        public async Task<IActionResult> Update([FromRoute] int id)
         {
-            // Retrieve the employee by ID and prepare the Update view
-            var employee = _employeeService.GetEmployeeById(id);
-            if (employee == null)
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            if (GetUserRole() != "Admin")
             {
-                return NotFound();
+                TempData["Error"] = "You do not have permission to update employees.";
+                return RedirectToAction("List");
             }
 
-            // Prepare dropdown options before rendering the Update view
+            var employee = await _employeeService.GetEmployeeById(id);
+            if (employee == null) return NotFound();
+
             GetSelectLists();
             return View(employee);
         }
 
-        // Model binding from the form data
         [HttpPost]
-        public IActionResult Update([FromForm] Employee employee)
+        public async Task<IActionResult> Update([FromForm] Employee employee)
         {
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            if (GetUserRole() != "Admin")
+            {
+                TempData["Error"] = "You do not have permission to update employees.";
+                return RedirectToAction("List");
+            }
+
             if (ModelState.IsValid)
             {
-                // Update the employee details and redirect to the List view
-                _employeeService.UpdateEmployee(employee);
+                await _employeeService.UpdateEmployee(employee);
                 TempData["Message"] = $"Employee with ID {employee.Id} and Name {employee.FullName} has been updated.";
                 return RedirectToAction("List");
             }
 
-            // If validation fails, regenerate dropdown options and return the view with validation errors
             GetSelectLists();
             return View(employee);
         }
 
-        // Model binding from the route data
         [HttpGet]
-        public IActionResult Delete([FromRoute] int id)
+        public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            // Retrieve the employee by ID and prepare the Delete confirmation view
-            var employee = _employeeService.GetEmployeeById(id);
-            if (employee == null)
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            if (GetUserRole() != "Admin")
             {
-                return NotFound();
+                TempData["Error"] = "You do not have permission to delete employees.";
+                return RedirectToAction("List");
             }
+
+            var employee = await _employeeService.GetEmployeeById(id);
+            if (employee == null) return NotFound();
+
             return View(employee);
         }
 
-        // We use ActionName to map this method to the "Delete" action
-        // Model binding from the route data
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteConfirmed([FromRoute] int id)
+        public async Task<IActionResult> DeleteConfirmed([FromRoute] int id)
         {
-            // Retrieve the employee by ID and delete the employee
-            var employee = _employeeService.GetEmployeeById(id);
-            if (employee == null)
+            if (!IsAuthenticated())
+                return RedirectToAction("Login", "Account");
+
+            if (GetUserRole() != "Admin")
             {
-                return NotFound();
+                TempData["Error"] = "You do not have permission to delete employees.";
+                return RedirectToAction("List");
             }
 
-            // Perform the deletion and redirect to the List view
-            _employeeService.DeleteEmployee(id);
+            var employee = await _employeeService.GetEmployeeById(id);
+            if (employee == null) return NotFound();
+
+            await _employeeService.DeleteEmployee(id);
             TempData["Message"] = $"Employee with ID {id} and Name {employee.FullName} has been deleted.";
 
             return RedirectToAction("List");
         }
 
-        // Model binding from the query string (default binding)
         [HttpGet]
         public JsonResult GetPositions(Department department)
         {
-            // This method returns a list of positions based on the department selected by the user
+            if (!IsAuthenticated())
+                return Json(new List<string>());
+
             var positions = new Dictionary<Department, List<string>>
             {
                 { Department.IT, new List<string> { "Software Developer", "System Administrator", "Network Engineer" } },
@@ -170,14 +219,10 @@ namespace EmployeePortal.Controllers
                 { Department.Admin, new List<string> { "Office Manager", "Executive Assistant", "Receptionist" } }
             };
 
-            // Check if the department exists in the dictionary, and return the corresponding positions
             var result = positions.ContainsKey(department) ? positions[department] : new List<string>();
-
-            // Return the positions as a JSON response to be used in client-side scripts
             return Json(result);
         }
 
-        // Private method to generate SelectLists for dropdowns in the views
         private void GetSelectLists()
         {
             ViewBag.DepartmentOptions = new SelectList(Enum.GetValues(typeof(Department)).Cast<Department>());
